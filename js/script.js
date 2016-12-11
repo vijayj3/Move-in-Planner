@@ -5,8 +5,8 @@ function loadData() {
     var $nytHeaderElem = $('#nytimes-header');
     var $nytElem = $('#nytimes-articles');
     var $greeting = $('#greeting');
-    var gApiKey = "AIzaSyDJCdhOnWqyOIpBa6ftbdAu0Syh27OE97I";
-    var nyApiKey = "e303db93517b4b75b52755d496de64a8";
+    var gApiKey = "XYZ";// Please fill in your registered API key which you can get from the here (https://developers.google.com/maps/documentation/javascript/get-api-key)
+    var nyApiKey = "XYZ";// Please fill in your registered API key which you can get from the here (https://developer.nytimes.com/signup)
     // clear out old data before new request
     $wikiElem.text("");
     $nytElem.text("");
@@ -28,7 +28,7 @@ function loadData() {
     //NY times ajax request
     var nyurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     nyurl += '?' + $.param({
-        'api-key': "e303db93517b4b75b52755d496de64a8",
+        'api-key': nyApiKey,
         'q': address,
         'sort': "newest"
     });
